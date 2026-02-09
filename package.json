@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/node": "^25.1.0"
+  },
+  "scripts": {
+    "build": "powershell -Command \"tsc; npx pkg index.js\""
+  }
+}
