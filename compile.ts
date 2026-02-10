@@ -29,6 +29,16 @@ function typeChecking(value:string, type:string):typeCheck{
                 isError:!(/\{.*\}/.test(value)),
                 type:type
             }
+        case "[]":
+            return{
+                isError:!(/\[.*\]/.test(value)),
+                type:type
+            }
+        case "{}":
+            return{
+                isError:!(/\{.*\}/.test(value)),
+                type:type
+            }
         default:
             return{
                 isError:true,

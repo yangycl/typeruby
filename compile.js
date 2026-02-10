@@ -28,6 +28,16 @@ function typeChecking(value, type) {
                 isError: !(/\{.*\}/.test(value)),
                 type: type
             };
+        case "[]":
+            return {
+                isError: !(/\[.*\]/.test(value)),
+                type: type
+            };
+        case "{}":
+            return {
+                isError: !(/\{.*\}/.test(value)),
+                type: type
+            };
         default:
             return {
                 isError: true,
