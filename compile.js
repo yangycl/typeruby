@@ -10,32 +10,32 @@ function typeChecking(value, type) {
             };
         case "String":
             return {
-                isError: !(/("|').*?("|')/.test(value)),
+                isError: !(/^("|').*?("|')$/.test(value)),
                 type: type
             };
         case "Boolean":
             return {
-                isError: !(/true|false/.test(value)),
+                isError: !(/^true|false$/.test(value)),
                 type: type
             };
         case "Array":
             return {
-                isError: !(/\[.*\]/.test(value)),
+                isError: !(/^\[.*\]$/.test(value)),
                 type: type
             };
         case "Hash":
             return {
-                isError: !(/\{.*\}/.test(value)),
+                isError: !(/^\{.*\}$/.test(value)),
                 type: type
             };
         case "[]":
             return {
-                isError: !(/\[.*\]/.test(value)),
+                isError: !(/^\[.*\]$/.test(value)),
                 type: type
             };
         case "{}":
             return {
-                isError: !(/\{.*\}/.test(value)),
+                isError: !(/^\{.*\}^/.test(value)),
                 type: type
             };
         default:
